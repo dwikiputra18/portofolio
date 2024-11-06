@@ -1,0 +1,210 @@
+/* app/page.module.css */
+
+.section {
+  margin: 20px 0;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+.noBold h1, .noBold h2, .noBold h3 {
+  font-weight: normal;
+  color: rgb(117, 193, 236);
+}
+
+.justifyText {
+  text-align: justify;
+}
+
+.imageContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.halfWidth {
+  flex: 1;
+  padding: 1rem;
+  text-align: left;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.imagelogo {
+  max-width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Centers the entire section horizontally */
+.centerAlign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Centers the table within the section */
+.centerTable {
+  margin: 0 auto;
+}
+
+.sectionWhite {
+  background-color: white;
+  color: black;
+}
+
+.sectionGray {
+  background-color: gray;
+  color: white;
+}
+
+/* Table responsiveness */
+.tableContainer {
+  overflow-x: auto;
+}
+
+.responsiveTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableHeader, .tableCell {
+  padding: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .responsiveTable, .tableBody, .tableRow, .tableHeader, .tableCell {
+    display: block;
+    width: 100%;
+  }
+
+  .tableRow {
+    margin-bottom: 10px;
+  }
+
+  .tableCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* SVG Text Styling */
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.svg {
+  font-family: "Russo One", sans-serif;
+}
+
+.svg text {
+  animation: stroke 5s infinite alternate;
+  stroke-width: 2;
+  stroke: #365FA0;
+  font-size: 100px;
+}
+
+@keyframes stroke {
+  0% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-dashoffset: 25%;
+    stroke-dasharray: 0 50%;
+    stroke-width: 2;
+  }
+  70% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+  }
+  80% {
+    fill: rgba(72, 138, 204, 0);
+    stroke: rgba(54, 95, 160, 1);
+    stroke-width: 3;
+  }
+  100% {
+    fill: rgba(72, 138, 204, 1);
+    stroke: rgba(54, 95, 160, 0);
+    stroke-dashoffset: -25%;
+    stroke-dasharray: 50% 0;
+    stroke-width: 0;
+  }
+}
+
+/* Social Media Section Styling */
+.sectionSocial {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.sectionSocial h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.socialIcon {
+  font-size: 24px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.socialIcon:hover {
+  color: #0077b5; /* Change color on hover */
+}
+
+@media (max-width: 768px) {
+  .socialLinks {
+    gap: 12px;
+  }
+
+  .socialIcon {
+    font-size: 20px;
+  }
+}
+
+/* Responsive styling for main section with SVG and text */
+@media (max-width: 768px) {
+  .halfWidth {
+    width: 100%;
+  }
+
+  .svg svg {
+    width: 100%; /* Make SVG responsive */
+    height: auto;
+  }
+
+  .justifyText {
+    padding: 10px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 10px;
+  }
+
+  .justifyText h3 {
+    font-size: 1em; /* Adjust font size for readability on smaller screens */
+  }
+
+  .image {
+    width: 100%; /* Ensure image scales to fit the screen */
+    margin-top: 20px; /* Add spacing for readability */
+  }
+}

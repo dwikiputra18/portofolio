@@ -1,0 +1,70 @@
+/* navbar/navbar.module.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #fff;
+    padding: 10px 20px;
+    position: sticky; /* Menjadikan navbar sticky */
+    top: 0; /* Posisi dari atas halaman */
+    z-index: 1000; /* Memastikan navbar di atas konten lainnya */
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  .navLinks {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Jarak antar item */
+    transition: max-height 0.3s ease;
+  }
+  
+  .navLinks li {
+    display: inline-block;
+  }
+  
+  .navbar a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline; /* Menggarisbawahi saat hover */
+  }
+  
+  /* Menu Icon (Hamburger) */
+  .menuIcon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #0000;
+  }
+  
+  /* Media Query untuk tampilan kecil */
+  @media (max-width: 768px) {
+    .navLinks {
+      display: none; /* Sembunyikan link pada layar kecil */
+      flex-direction: column; /* Tampilkan link dalam kolom */
+      position: absolute;
+      top: 60px; /* Sesuaikan jarak dari atas */
+      right: 0; /* Tampilkan dari sisi kanan */
+      background-color: #ffffff;
+      width: 100%;
+      max-height: 0;
+      overflow: hidden; /* Sembunyikan overflow */
+    }
+  
+    .navLinks.active {
+      display: flex; /* Tampilkan link saat aktif */
+      max-height: 200px; /* Sesuaikan tinggi */
+    }
+  
+    .menuIcon {
+      display: block; /* Tampilkan ikon hamburger */
+      color: #fff;
+    }
+  }
+  
